@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    int num1, num2, rem, result = 0;
+    printf("Enter a number: ");
+    scanf("%d", &num1);
+    num2 = num1;
+
+    while(num2 != 0)
+    {
+       // remainder contains the last digit
+        rem = num2 % 10;
+        
+       result += rem * rem * rem;
+        
+       // removing last digit from the orignal number
+       num2 /= 10;
+    }
+
+    if (result == num1)
+        printf("%d is an Armstrong number.", num1);
+    else
+        printf("%d is not an Armstrong number.", num1);
+
+    return 0;
+}
