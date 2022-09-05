@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+   /* 2D array declaration*/
+   int p[2][2];
+   /*Counter variables for the loop*/
+   int i, j;
+   for(i=0; i<2; i++)
+   {
+      for(j=0;j<2;j++)
+      {
+         printf("Enter value for p[%d][%d]:", i, j);
+         scanf("%d", &p[i][j]);
+      }
+   }
+   //Displaying array elements
+   printf("Two Dimensional array elements:\n");
+   for(i=0; i<2; i++)
+   {
+       printf("\n");
+      for(j=0;j<2;j++)
+      {
+         printf("%d \t", p[i][j]);
+         
+      }
+   }
+   return 0;
+}

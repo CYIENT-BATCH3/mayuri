@@ -1,0 +1,4 @@
+1 start 
+2 declare variuable and take limit from user
+3 scan the input from user until limit is used
+4 print all the elements

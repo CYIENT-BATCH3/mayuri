@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main() {
+    // declaration of variables
+    int p[100];
+    int i,plant,n=20;
+    int vin1=8;
+    int vin2=30;
+    int vin3=10;
+    printf("select the plant :");
+    scanf("%d",&plant);
+    
+     switch(plant)
+     {
+         
+    
+    
+        case 1 :
+        for(i=0;i<20;i++)
+    {
+        p[i]=vin1;
+         printf("1CYCLE10PZYPE%d\n",p[i]);
+        vin1++;
+    }
+            
+       
+        break;
+    
+    
+    
+    case 2 :
+    for(i=0;i<20;i++)
+    {
+    {
+        p[i]=vin2;
+        {
+        printf("1CYCLE10PZYPE%d\n",p[i]);
+        
+        }
+        vin2++;
+        
+    }
+
+    
+    }
+    break;
+    
+    case 3 :
+    {
+    
+        p[i]=vin3;
+        {
+    
+        printf("1CYCLE10PZYPE%d\n",p[i]);
+        
+        }
+        vin3++;
+    }
+
+    
+        
+    break;
+    
+    
+    
+    
+    
+    }
+    return 0;
+}

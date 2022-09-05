@@ -1,0 +1,4 @@
+1 start
+2 intilize the variables
+3 take input the plant
+4 according to plant print the unique VIN for each car upto 20

@@ -1,0 +1,4 @@
+start
+intialise the variable and input the array
+find the sum of element with indexes 00,10,11,21,22,32,33
+print the sum
