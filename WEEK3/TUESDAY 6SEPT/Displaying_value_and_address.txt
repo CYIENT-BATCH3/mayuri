@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+    int i=15, *p;
+    float var=96.3, *ptr;
+    char str[6] = "Hello",*pt;
+    /* Pointer referencing */
+    p=&i;
+    ptr = &var;
+    pt = str;
+    /* Displaying value and address */
+    printf("Address of Variable i = %u\n",p);
+    printf("Value of Variable i = %u\n",*p);
+    printf("Address of Variable str = %u\n",pt);
+    printf("Value of Variable str = %u\n",*pt);
+    printf("Value of var = %u\n", *ptr);
+    printf("Address of var using pointer = %u\n", ptr);
+
+    return 0;
+}

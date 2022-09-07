@@ -1,0 +1,24 @@
+#include<stdio.h>
+void Swap(int *a, int *b)
+{  
+int temp;
+ temp=*a;   // *(pointer_variable) to access the value
+*a=*b;
+*b=temp;
+}
+int main()
+{
+int a,b;
+printf("\n Enter the value of A: ");
+scanf("%d",&a);
+printf(" Enter the value of B: ");
+scanf("%d",&b);
+Swap(&a,&b); 
+
+ 
+printf("\n After Swapping... \n");
+printf(" A: %d", a);
+printf("\n B: %d", b);
+ 
+return 0;
+}

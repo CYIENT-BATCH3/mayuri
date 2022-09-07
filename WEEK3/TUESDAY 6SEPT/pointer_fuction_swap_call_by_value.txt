@@ -1,0 +1,20 @@
+#include<stdio.h> //Header file for Standard input and output
+void SwapFunction(int *, int *); //Swapping Function Header
+int main(){
+              int numbr1, numbr2;
+             
+             printf("\n Enter any two Integer numbers: ");
+             scanf("%d  %d", &numbr1, &numbr2);
+             printf("\n The Given Numbers are %d %d", numbr1, numbr2);
+             SwapFunction(&numbr1, &numbr2); //Function Call//ref
+             printf("\n The Swapped Numbers are %d %d", numbr1, numbr2);
+             }
+
+// Function definition for Swapping of  given Integers using Pointers
+void SwapFunction( int *n1, int *n2)
+{
+            int i;
+            i = *n1;
+            *n1 = *n2;
+            *n2 = i;
+            }
