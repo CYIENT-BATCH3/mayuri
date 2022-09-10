@@ -1,0 +1,29 @@
+// A C program for array of pointer..
+#include<stdio.h>
+
+int main()
+{
+    int arr[100], *ptr, i, n;
+
+    printf("How many numbers to read? (< 100): ");
+    scanf("%d", &n);
+    /* Pointer referencing */
+    ptr = &arr[0]; /* same as ptr = arr; */
+
+    /* Reading array using pointer */
+    printf("Enter %d numbers:\n", n);
+    for(i=0;i< n;i++)
+    {
+        printf("arr[%d] = ", i);
+        scanf("%d", (ptr+i));
+    }
+
+    /* Displaying array content */
+    printf("\nArray content read from user is: \n");
+    for(i=0;i< n;i++)
+    {
+        printf(" Value = %d\t Address = %u\n", *(ptr+i), (ptr+i));
+    }
+
+    return 0;
+}

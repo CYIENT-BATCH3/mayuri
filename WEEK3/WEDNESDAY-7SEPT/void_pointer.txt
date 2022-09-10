@@ -1,0 +1,25 @@
+// A C program to read and print void pointer
+#include<stdio.h>
+#include<stdlib.h>
+int main() 
+{
+   int a = 7;//integer pointer
+   char *cp ='z';//character pointer  
+   float b = 7.6;//float pointer
+   double d=55.33;//double pointer
+   long int l=33.55;
+   
+   void *p;
+   
+   p = &a;
+   printf("Integer variable is = %d", *( (int*) p) );
+   p = &b;
+   printf("\nFloat variable is = %f", *( (float*) p) );
+   p = &cp;
+   printf("\ncharacter variable is = %c", *( (char*) p) );
+   p = &d;
+   printf("\ndouble variable is = %f", *( (double*) p) );
+   p = &l;
+   printf("\nlong int variable is = %ld", *( (long int*) p) );
+   return 0;
+}

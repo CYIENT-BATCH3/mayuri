@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+int main()
+{
+    int *ptr = NULL;    // ptr is a NULL pointer
+
+    printf("\The value of ptr is: %u ", ptr);
+    
+    return 0;
+}
