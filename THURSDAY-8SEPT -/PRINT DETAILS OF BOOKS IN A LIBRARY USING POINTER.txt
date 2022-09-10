@@ -1,0 +1,35 @@
+// WAP TO PRINT DETAILS OF BOOKS IN A LIBRARY USING POINTER
+#include<stdio.h>
+struct library
+{
+     char book_name[20];
+    char author[20];
+      int book_no;
+};
+int main()
+{
+    
+      struct library lib;
+       struct library *books=NULL;
+     books=&lib;
+     int n;
+     printf("\nEnter no of books you want :");
+     scanf("\n%d",&n);
+    for(int i=0;i<n;i++)
+    {
+         printf("\n****Enter book details****");
+    printf("\n--------------------------------------");
+     printf("\nEnter the book name: ");
+    scanf("%s",(books+i)->book_name);
+    printf("\nEnter authour: ");
+    scanf("%s",(books+i)->author);
+    printf("\nEnter the book no: ");
+    scanf("%d",&(books+i)->book_no);
+    }
+    printf("\nBOOK NO\t\tBOOK NAME\t\tAUTHOR NAME ");
+    for(int i=0;i<n;i++)
+    {
+    printf("\n%d\t\t%s\t\t%s\t\t",(books+i)->book_no,(books+i)->book_name,(books+i)->author);
+    }
+}
+

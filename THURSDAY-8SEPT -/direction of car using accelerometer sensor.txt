@@ -1,0 +1,59 @@
+//WAP to find the direction of car using accelerometer sensor 
+	#include <stdio.h> 
+	//include standard input and output header file using preprocessor directive 
+	struct accelerometer //declare a struct with integer members 
+	{ 
+	   int x; 
+	   int y; 
+	   int z; 
+	}sensor[5]; //declare a struct variable as array of struct 
+	
+	int main() //start main() 
+	{ 
+	    int x1=0,y1=0,z1=0; //declare and intialize 3 integer variables by 0 
+	    int i,n; 
+	    //declare n(int) for no.of samples and i for referncing in for loop 
+	    puts("Enter No.of values to be taken:"); 
+	    scanf("%d",&n); //input no.of values to be taken 
+	    for(i=1;i<=n;i++) 
+	    // for loop to assign the values to array of struct members 
+	    { 
+	        printf("Enter the values for each member%d\n",i); 
+	        scanf("%d %d %d",&sensor[i].x,&sensor[i].y,&sensor[i].z); 
+	    } 
+	    
+	    for(i=1;i<=n;i++) 
+	    // for loop to find the total sum for each member of array of struct 
+	    { 
+	    x1=x1+(sensor[i].x); 
+	    y1=y1+(sensor[i].y); 
+	    z1=z1+(sensor[i].z); 
+	    } 
+	    
+	    printf("x1:%d y1:%d z1:%d\n",x1,y1,z1); //print the total sum of each member 
+	    x1=x1/n; //find the average member 1 
+	    y1=y1/n; //find the average member 2 
+	    z1=z1/n; //find the average member 3 
+	    
+	if(x1==100&&y1==250&&z1==300) 
+	// elseif ladder to trace the direction of vehicle
+	    { 
+	        printf("Left\n"); 
+	    } 
+	    else if(x1==300&&y1==250&&z1==100) 
+	    { 
+	        printf("Right \n"); 
+	    } 
+	    else if(x1==100&&y1==100&&z1==300) 
+	    { 
+	        printf("Backward \n"); 
+	    } 
+	    else if(x1==250&&y1==800&&z1==200) 
+	    { 
+	        printf("Forward \n"); 
+	    } 
+	    else 
+	    { 
+	        printf("STOP\n"); 
+	    } 
+	}
