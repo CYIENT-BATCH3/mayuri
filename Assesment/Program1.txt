@@ -1,0 +1,44 @@
+/*
+ * converter.c
+ *
+ *  Created on: Sep 17, 2022
+ *      Author: mw69925
+ */
+
+
+/* ALGORITHM
+ * ------------------------------------------------------------------------------------------------------
+ * Step 1:start
+ * step 2:declare and initialize the variable
+ * step 3:read the input
+ * Step 5:Divide the number by 2 and find the remainder, then store the remainder in an array.
+ * Step 6: keep dividing each successive quotient by 2 until you get a quotient of zero.
+ * Step 7: Repeat the above two steps until number is greater than zero
+ * step 8:Print the array in reverse order to get the binary representation of the number.
+ * step 9:stop
+ */
+
+/*                        DECIMAL TO BINARY CONVERSION                                                      */
+
+
+#include<stdio.h>
+
+int main()
+{
+	setbuf(stdout,NULL);
+	int num[5],i,n;                               // declaring and initializing the variables
+	printf("Enter the decimal to convert: \n");
+	scanf("%d",&n);									              // taking the data from user
+	for(i=0;n>0;i++)								              // using the for loop
+	{
+		num[i]=n%2;									                //Divide the number by 2 through % (modulus operator) and store the remainder in array
+		n=n/2;										                  //Divide the number by 2 through / (division operator)
+	}
+	printf("Binary number are :\n");
+	for(i=i-1;i>=0;i--)
+	{
+		printf("%d",num[i]);                        //printing the binary value after converting
+	}
+	return 0;
+}
+
