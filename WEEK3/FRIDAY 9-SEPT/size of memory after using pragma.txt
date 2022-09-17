@@ -1,0 +1,14 @@
+#include<stdio.h>
+#pragma pack(1)
+struct student
+{
+char ch;
+int x;
+float c;
+}s1;
+
+int main()
+{
+struct student s1;
+printf("size of memory after using pragma ::%d",sizeof(s1));
+}

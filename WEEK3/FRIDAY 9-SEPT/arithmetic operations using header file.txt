@@ -1,0 +1,69 @@
+//arith.c
+
+
+
+float sum (float x, float y)
+{
+    return (x + y);
+}
+
+float sub (float x, float y)
+{
+    return (x - y);
+}
+
+float div (float x, float y)
+{
+    return (x == 0 || y == 0)
+            ? 0
+            : (x / y);
+}
+
+float mult (float x, float y)
+{
+    return (x * y);
+}
+
+int mod (int x, int y)
+{
+    return (x % y);
+}
+--------------------------------------------------------------------------------------------------------------------------------
+
+arith.h
+
+
+
+#ifndef ARITH_H
+
+
+#define ARITH_H
+
+// Declare all functions
+float sum (float, float);
+float sub (float, float);
+float div (float, float);
+float mult (float, float);
+int mod (int, int);
+
+#endif
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+main.c
+
+
+#include <stdio.h>
+#include "arith.h"   // Include our custom header file
+
+int main()
+{
+    printf("sum(10, 20)  = %f\n", sum(10, 20));
+    printf("sub(10, 20)  = %f\n", sub(10, 20));
+    printf("mult(10, 20) = %f\n", mult(10, 20));
+    printf("div(10, 20)  = %f\n", div(10, 20));
+    printf("mod(10, 20)  = %d\n",   mod(10, 20));
+
+    return 0;
+}

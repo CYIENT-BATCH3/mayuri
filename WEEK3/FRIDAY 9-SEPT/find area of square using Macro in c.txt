@@ -1,0 +1,30 @@
+/* Program to find area of square using Macro in c */
+
+#include <stdio.h>
+
+
+
+#define SQUARE(r) (r * r)
+
+int main()
+{
+
+    int length_of_side;
+    int area_of_square;
+
+/* Read the Length of Side of a Square */
+
+    printf("Enter the length of side in 'cm' of a Square:");
+    scanf("%d",&length_of_side);
+
+/* Calling Macro area(r) where r is length_of_side */
+
+    area_of_square = SQUARE(length_of_side);
+
+    printf("Area of Square = %d",area_of_square);
+    printf("cm(square)");
+
+    
+    return 0;
+
+}

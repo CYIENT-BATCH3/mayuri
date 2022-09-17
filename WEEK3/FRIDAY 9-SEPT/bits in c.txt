@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+struct bitField1 {
+  int val1;
+  int val2;
+};
+
+struct bitField2 {
+  int val1: 1;
+  int val2: 1;
+};
+
+int main()
+{
+  printf(" \n Size of memory engaged by example_bitField1 : %u ", sizeof(struct bitField1));
+  printf(" \n Size of memory engaged by example_bitField2: %u ", sizeof(struct bitField2));
+  return 0;
+}
+
+

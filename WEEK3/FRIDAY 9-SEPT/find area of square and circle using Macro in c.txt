@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+
+#define PI 3.14
+#define SQUARE(r) (r * r)
+
+int main()
+{
+	setbuf(stdout,NULL);
+
+    int length_of_side;
+    int area_of_square;
+    int radius,area_circle;
+
+    /* Read the Radius of a Circle */
+    printf("Enter Radius of Circle:\n");
+        scanf("%d", &radius);
+
+        area_circle = PI * radius * radius;
+        printf("Area of Circle is :%d cm(square)\n", area_circle);
+
+/* Read the Length of Side of a Square */
+
+    printf("Enter the length of side in 'cm' of a Square:");
+    scanf("%d",&length_of_side);
+
+/* Calling Macro area(r) where r is length_of_side */
+
+    area_of_square = SQUARE(length_of_side);
+
+    printf("Area of Square = %d cm(square)",area_of_square);
+
+
+
+    return 0;
+
+}
