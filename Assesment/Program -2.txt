@@ -1,0 +1,21 @@
+/*ALGORITHIM :-
+ * start
+ * taking the input from the user
+ * making the function for set the bit
+ * in this n is the number in which we have set 
+ * k is the position for which position we have set  
+ */
+#include <stdio.h>
+int setbit(int, int); 						//function prototype
+int main()
+{
+	setbuf(stdout,NULL);
+	int n,k;								//declaring the variables
+	printf("enter the number: \n");
+	scanf("%d%d",&n,&k);					//user will give the input
+	printf("bit Set: %d\n",setbit(n, k));	//printing the set position 
+}
+int setbit(int n, int k)
+{
+	return (n | (1 << (k - 1)));			//returning the values to main
+}
